@@ -9,9 +9,9 @@ A empresa quer um mini sistema de agendamento inteligente que:
 • Permita criar um agendamento
 • Mostre dados reais de data, fuso horário e dias úteis
 
-## O desafio
+## O sistema
 
-Você deve criar um sistema web onde:
+Este é um sistema web onde:
 • O usuário escolhe uma data
 • O sistema mostra horários disponíveis
 • O usuário seleciona um horário e cria um agendamento
@@ -21,28 +21,29 @@ Usando uma API pública real de datas e feriados.
 ### API obrigatória
 
 https://date.nager.at/api/v3/PublicHolidays/2026/BR
-Você deve bloquear agendamentos em feriados e finais de semana.
+O sistema consulta o calendário de feriados nacionais aqui.
 
 ### Arquitetura
 
-O projeto deve ser Full Stack. As tecnologias ficam a critério do candidato, desde que exista:
+O projeto foi desenvolvido com SQLite, JavaScript, HTML e CSS. Ele possui:
 • Backend com rotas REST
 • Persistência em banco de dados
 • Consumo da API de feriados no backend
 • Frontend web para interação do usuário
 
-### Fluxo obrigatório
+### Fluxo
 
 Usuário escolhe data → Frontend chama backend → Backend consulta API de feriados →
 Backend valida → Retorna horários → Usuário escolhe → Backend salva
 
-### Endpoints mínimos
+### Endpoints possíveis
 
 GET /available?date=2026-02-10
 POST /appointments
 GET /appointments
 
 ### Regras de negócio
+
 • Horário de funcionamento: 08:00 às 18:00
 • Consultas duram 1 hora
 • Não pode marcar em feriados, finais de semana ou horários ocupados
