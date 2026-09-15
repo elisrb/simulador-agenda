@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,14 +15,18 @@
     </header>
 
     <main>
-        <input type="date" id="data">
-        <div id="horarios"></div>
-
+        <div>
         <form id="form-agendamento">
+            <input type="date" id="data" min="2026-01-02" max="2026-12-31">
+            <div id="horarios"></div>
             <div id="horario-atual"></div>
-            <input type="text" id="nome" placeholder="Nome" required>
-            <button type="submit">Confirmar agendamento</button>
+            <input type="text" id="nome" placeholder="Nome">
         </form>
+        <button id="confirmar">Confirmar agendamento</button>
+        </div>
+
+        <button id="visualizar">Visualizar agendamentos</button>
+        <div id="agenda"></div>
     </main>
 
     <footer>
